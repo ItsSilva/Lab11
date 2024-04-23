@@ -1,5 +1,5 @@
 export const obtenerPersonaje = async () => {
-  const response = await fetch("./data.json");
+  const response = await fetch("https://valorant-api.com/v1/agents");
   const cosito = await response.json();
   return cosito.data;
 };
