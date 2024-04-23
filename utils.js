@@ -4,14 +4,14 @@ export const obtenerPersonaje = async () => {
   return cosito.data;
 };
   
-  export const obtenerPersonajePorId = async (id) => {
-    const Personajes = await obtenerPersonaje();
-  
-    for (const Personaje of Personajes) {
-      if (Personaje.id === id) {
-        return Personaje;
-      };
-    };
-  
-    throw new Error("Personaje no encontrado");
-  };
+export const personajePorId = async (id) => {
+  const personaje = await obtenerPersonaje();
+
+  for (const item of personaje){
+    if(item.uuid === id) {
+      return item;
+    }
+  }
+
+  throw new Error ("Personaje no encontrado");
+}

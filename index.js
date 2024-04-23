@@ -30,11 +30,23 @@ const render = async () => {
     description.textContent = personaje.description;
     right.appendChild(description);
 
+    const btnDiv = document.createElement("div");
+    btnDiv.classList.add("btnDiv");
+    right.appendChild(btnDiv);
+
     const button = document.createElement("button");
     button.classList.add("btn");
     button.textContent = "Ver información detallada";
-    right.appendChild(button); 
-    
+    btnDiv.appendChild(button); 
+
+    button.addEventListener("click", () => {
+      window.location.href = `./personajes.html?id=${personaje.uuid}`;  
+    });
+
+    const trash = document.createElement("i");
+    trash.classList.add("fas", "fa-trash", "fa-3x");
+    btnDiv.appendChild(trash);
+
     personajes.appendChild(contenedor);
   }
 };
