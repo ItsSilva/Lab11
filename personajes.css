@@ -8,3 +8,26 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
 }
+section.Personaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 2rem;
+}
+.leftImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.leftImg img{
+    width: 50%;
+    background-color: #313131;
+}
+.rightInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+}

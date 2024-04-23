@@ -46,6 +46,10 @@ const render = async () => {
     const trash = document.createElement("i");
     trash.classList.add("fas", "fa-trash", "fa-3x");
     btnDiv.appendChild(trash);
+    
+    trash.addEventListener("click", async () => {
+    contenedor.remove();
+   });
 
     personajes.appendChild(contenedor);
   }
